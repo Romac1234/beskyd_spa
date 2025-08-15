@@ -1,0 +1,326 @@
+/* GENERAL */
+
+html {
+  scroll-behavior: smooth;
+  background-color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* EMOT */
+
+.emot {
+  position: fixed;
+  display: block;
+  left: 4vw;
+  top: 3vw;
+  width: 9%;
+  transition: 0.5s;
+  background-color: transparent;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.emot:hover {
+  width: 12%;
+  height: auto;
+}
+
+/* RIGHT MENU */
+.right-menu {
+  position: fixed;
+  display: inline-block;
+  top: 3vw;
+  right: 6vw;
+  z-index: 1;
+  font-size: 2vw;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.right-menu .menu-button {
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  padding: 1.3vw;
+  font-size: 2vw;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 12px;
+}
+
+.right-menu:hover .menu-button {
+  background-color: transparent;
+}
+
+.right-menu .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 5vw;
+  z-index: 1;
+}
+
+.right-menu:hover .dropdown-menu {
+  display: block;
+}
+
+.right-menu .dropdown-menu a {
+  color: white;
+  padding: 0.5vw 2vw;
+  text-decoration: none;
+  display: block;
+}
+
+.right-menu .dropdown-menu a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/*LYSA HORA*/
+
+.hora {
+  position: relative;
+}
+
+.hora .lysahora {
+  width: 100%;
+  height: auto;
+}
+
+.hora h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: black;
+  color: white;
+}
+
+/* SUBKY */
+.subky {
+  font-size: 2vw;
+  padding-block: 2vw;
+  /* border-block: 1px solid red; */
+  overflow: hidden;
+  user-select: none;
+  display: flex;
+  gap: 2vw;
+}
+
+.subky ul {
+  list-style: none;
+  flex-shrink: 0;
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  animation: scroll 10s linear infinite;
+}
+
+.subky .firma {
+  font-weight: bold;
+  margin-inline: 4px;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* INSPIRE */
+.inspire {
+  text-align: center;
+  font-size: 3vw;
+  color: white;
+  margin: 2vw;
+}
+
+/* RADA */
+
+.rada {
+  display: flex;
+  justify-content: space-around;
+  margin: 2vw;
+}
+
+.rada .karta {
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); */
+  transition: 0.3s;
+  width: 49%;
+  height: auto;
+  border-radius: 5px;
+  background-color: #000;
+}
+
+/* .rada .karta:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+} */
+
+.rada .karta img {
+  border-radius: 5px 5px 0 0;
+  width: 80%;
+  height: auto;
+  margin: auto;
+  display: block;
+  margin-top: 1vw;
+  transition: 0.8s;
+  cursor: pointer;
+}
+
+.rada .karta img:hover {
+  width: 100%;
+}
+
+.rada .karta .popisek {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 2vw;
+  margin: 2vw 4vw 2vw 5vw;
+  color: white;
+}
+
+.rada .karta .popisek p {
+  padding-top: 0.5vw;
+  font-size: 1.5vw;
+}
+
+.rada .karta_siroka {
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); */
+  transition: 0.3s;
+  width: 80%;
+  justify-content: center;
+  height: auto;
+  border-radius: 5px;
+  position: relative;
+  background-color: #000;
+}
+
+.rada .karta_siroka .popisek_siroky {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  bottom: 1vw;
+  left: 8vw;
+  color: white;
+}
+
+.rada .karta_siroka .popisek_siroky p {
+  padding-top: 0.5vw;
+  font-size: 1.5vw;
+}
+
+.kontakty {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  border-style: solid;
+  border-width: 2px;
+  border-color: grey;
+  color: white;
+  padding: 1vw;
+  background-color: black;
+  margin: 5vw auto 10vw auto;
+}
+
+.kontakty .kontakt {
+  width: auto;
+}
+
+.kontakty .kontakt p {
+  padding-top: 0.5vw;
+  font-size: 1vw;
+}
+
+/* MEDIA*/
+
+@media (max-width: 600px) {
+  .rada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vw;
+  }
+
+  .rada .karta {
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5); */
+    transition: 0.3s;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    border-radius: 5px;
+    background-color: #000;
+  }
+
+.rada .karta .popisek {
+    margin-left: 6vw;
+  }
+
+
+  .rada .karta .popisek p {
+    padding-top: 0.5vw;
+    font-size: 2vw;
+  }
+
+.rada .karta_siroka {
+  height: 40vw;
+}
+
+
+.rada .karta_siroka .popisek_siroky {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  bottom: 1vw;
+  left: 8vw;
+  color: white;
+}
+
+
+.rada .karta_siroka .popisek_siroky {
+    padding-top: 0.5vw;
+    font-size: 2vw;
+  }
+
+.rada .karta_siroka .popisek_siroky p {
+    font-size: 2vw;
+  }
+
+
+.kontakty {
+    width: 82%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: grey;
+    color: white;
+    padding: 3vw;
+    background-color: black;
+    margin: 5vw 5% 10vw auto;
+  }
+
+  .kontakty .kontakt {
+    width: auto;
+    padding: 3vw;
+  }
+
+  .kontakty .kontakt p {
+    padding-top: 0.5vw;
+    font-size: 2vw;
+  }
+}
