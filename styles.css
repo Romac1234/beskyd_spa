@@ -36,6 +36,25 @@ html {
   height: auto;
 }
 
+.logo {
+  position: fixed;
+  display: block;
+  left: 4vw;
+  top: 3vw;
+  width: 13%;
+  border-radius: 50%;
+  border:  0.6vw solid #555;
+  transition: 0.5s;
+  background-color: transparent;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.logo:hover {
+  width: 18%;
+  height: auto;
+}
+
 /* RIGHT MENU */
 .right-menu {
   position: fixed;
@@ -324,3 +343,4 @@ html {
     font-size: 2vw;
   }
 }
+
