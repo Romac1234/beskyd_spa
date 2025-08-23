@@ -20,7 +20,7 @@ html {
 .logo {
   position: fixed;
   display: block;
-  left: 4vw;
+  left: 40%;
   top: 3vw;
   width: 15%;
   border-radius: 50%;
@@ -34,6 +34,30 @@ html {
 .logo:hover {
   width: 20%;
   height: auto;
+}
+
+.logo-animation {
+  position: absolute; /* This is crucial for the animation to work */
+  top: -200px; /* Start the logo above the visible page */
+  animation: fall 2s ease-in-out forwards; /* Apply the animation */
+}
+
+@keyframes fall {
+  from {
+    top: -200px; /* Starting position */
+    opacity: 0; /* Start with the logo invisible */
+  }
+  to {
+    top: 300px; /* Final position on the page */
+    opacity: 1; /* Make the logo visible */
+  }
+}
+
+.logo-fixed {
+  position: fixed;
+  top: 300px; /* Or wherever you want it to be fixed */
+  left: 15%;
+  transform: translateX(-50%);
 }
 
 /* RIGHT MENU */
