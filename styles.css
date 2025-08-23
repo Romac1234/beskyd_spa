@@ -17,33 +17,14 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* EMOT */
-
-.emot {
-  position: fixed;
-  display: block;
-  left: 4vw;
-  top: 3vw;
-  width: 9%;
-  transition: 0.5s;
-  background-color: transparent;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.emot:hover {
-  width: 12%;
-  height: auto;
-}
-
 .logo {
   position: fixed;
   display: block;
   left: 4vw;
   top: 3vw;
-  width: 13%;
+  width: 15%;
   border-radius: 50%;
-  border:  0.6vw solid #555;
+  border: 0.6vw solid #555;
   transition: 0.5s;
   background-color: transparent;
   z-index: 1;
@@ -51,7 +32,7 @@ html {
 }
 
 .logo:hover {
-  width: 18%;
+  width: 20%;
   height: auto;
 }
 
@@ -62,20 +43,23 @@ html {
   top: 3vw;
   right: 6vw;
   z-index: 1;
-  font-size: 2vw;
+  color: white;
+  font-size: 3vw;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .right-menu .menu-button {
   background-color: rgba(255, 255, 255, 0);
-  color: white;
-  padding: 1.3vw;
-  font-size: 2vw;
-  font-weight: bold;
   cursor: pointer;
-  border: 2px solid white;
-  border-radius: 12px;
+  border: 0.4vw solid white;
+  border-radius: 3vw;
+}
+
+.right-menu .menu-button .menu-icon {
+  width: 7vw;
+  height: auto;
+  padding: 0.3vw 2.8vw;
 }
 
 .right-menu:hover .menu-button {
@@ -267,6 +251,66 @@ html {
 /* MEDIA*/
 
 @media (max-width: 600px) {
+  .logo {
+    width: 23%;
+    height: auto;
+  }
+
+  .logo:hover {
+    width: 30%;
+    height: auto;
+  }
+
+  .right-menu {
+    font-size: 5vw;
+    top: 3vw;
+    right: 10vw;
+  }
+
+  .right-menu .menu-button {
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    border: 0.7vw solid white;
+    border-radius: 3vw;
+  }
+
+  .right-menu .menu-button .menu-icon {
+    width: 13vw;
+    height: auto;
+    padding: 0.3vw 2.8vw;
+  }
+
+  .right-menu:hover .menu-button {
+    background-color: transparent;
+  }
+
+  .right-menu .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 5vw;
+    z-index: 1;
+  }
+
+  .right-menu:hover .dropdown-menu {
+    display: block;
+  }
+
+  .right-menu .dropdown-menu a {
+    color: white;
+    padding: 0.5vw 2vw;
+    text-decoration: none;
+    display: block;
+  }
+
+  .right-menu .dropdown-menu a:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .right-menu .dropdown-menu a {
+    padding: 1vw 2vw;
+  }
   .rada {
     display: flex;
     flex-direction: column;
@@ -285,41 +329,37 @@ html {
     background-color: #000;
   }
 
-.rada .karta .popisek {
+  .rada .karta .popisek {
     margin-left: 6vw;
   }
-
 
   .rada .karta .popisek p {
     padding-top: 0.5vw;
     font-size: 2vw;
   }
 
-.rada .karta_siroka {
-  height: 40vw;
-}
+  .rada .karta_siroka {
+    height: 40vw;
+  }
 
+  .rada .karta_siroka .popisek_siroky {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    bottom: 1vw;
+    left: 8vw;
+    color: white;
+  }
 
-.rada .karta_siroka .popisek_siroky {
-  font-family: Arial, Helvetica, sans-serif;
-  position: absolute;
-  bottom: 1vw;
-  left: 8vw;
-  color: white;
-}
-
-
-.rada .karta_siroka .popisek_siroky {
+  .rada .karta_siroka .popisek_siroky {
     padding-top: 0.5vw;
     font-size: 2vw;
   }
 
-.rada .karta_siroka .popisek_siroky p {
+  .rada .karta_siroka .popisek_siroky p {
     font-size: 2vw;
   }
 
-
-.kontakty {
+  .kontakty {
     width: 82%;
     display: flex;
     flex-direction: column;
@@ -343,4 +383,3 @@ html {
     font-size: 2vw;
   }
 }
-
